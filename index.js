@@ -1,24 +1,10 @@
-const codes = [
-  {
-    awell: "the optmist sees opportunity.in every difficulty",
-    author: "winston churchill",
-  },
-  {
-    awell: "secons",
-    author: "random",
-  },
-];
-const btn = document.getElementById("submit");
-const submit = document.getElementById("author");
-const cwell = document.getElementById("awell");
-const author = document.getElementById("author");
-console.log(submit[3], Math.random());
-btn.addEventListener("click", () => {
-  let random = Math.floor(Math.random() * codes.length);
-  // console.log(codes.length);
-  let generate = codes[random];
-  console.log(generate);
+var closeBtn = document.getElementById("close");
+//console.log(closeBtn);
+closeBtn.addEventListener("click", () => {
+  // console.log(closeBtn.parentElement.parentElement.parentElement);
 
-  cwell.innerHTML = generate.awell;
-  author.innerHTML = generate.author;
+  const close = closeBtn.parentElement.parentElement.parentElement;
+  console.log(closeBtn.parentElement.parentElement.parentElement);
+  //close.style.display = "none";
+  console.log("closed");
 });
